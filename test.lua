@@ -125,7 +125,7 @@ local Spring = Load(
 	"Spring"
 )
 local FemaleRig = Load(
-	"https://raw.githubusercontent.com/aesyns/test/main/FemaleRig",
+	"https://raw.githubusercontent.com/aesyns/test/main/FemaleRig.lua",
 	"FemaleRig",
 	Settings.Collisions
 )
@@ -318,6 +318,7 @@ local function VerifyRigAndApply(instance, ApplyPhysics)
 			if Player ~= LocalPlayer then
 				return
 			end
+		end
 		if Settings.Only_Others then
 			if Settings.Only_Me then return end
 			Player = Players:GetPlayerFromCharacter(instance)
