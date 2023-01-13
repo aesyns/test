@@ -310,7 +310,7 @@ end
 
 local function VerifyRigAndApply(instance, ApplyPhysics)
 	if instance:IsA("Model") then
-    wait(1)
+    task.wait(1.5)
 		local Player
 		if Settings.Only_Others then
 			Player = Players:GetPlayerFromCharacter(instance)
