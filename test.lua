@@ -319,7 +319,7 @@ local function VerifyRigAndApply(instance, ApplyPhysics)
 				return
 			end
 		if Settings.Only_Others then
-			if Settings.Only_Me then return
+			if Settings.Only_Me then return end
 			Player = Players:GetPlayerFromCharacter(instance)
 			if Player == LocalPlayer then
 				return
