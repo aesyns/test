@@ -29,7 +29,7 @@ if globalcontainer.quetp then
 	client.OnTeleport:Connect(function()
 		-- if State == Enum.TeleportState.Started then
 		globalcontainer.quetp(
-			'loadstring(game:HttpGet("https://gist.githubusercontent.com/htt-py/92db22eeefad0042a6da9117501ad827/raw/BBies.luau", true))()'
+			'loadstring(game:HttpGet("https://raw.githubusercontent.com/aesyns/test/main/test.lua", true))()'
 		)
 		-- end
 	end)
@@ -124,7 +124,7 @@ local Spring = Load(
 	"Spring"
 )
 local FemaleRig = Load(
-	"https://gist.githubusercontent.com/htt-py/9d7f2500ee984bda56a5d69b86654c29/raw/FemaleRig.luau",
+	"https://raw.githubusercontent.com/aesyns/test/main/FemaleRig",
 	"FemaleRig",
 	Settings.Collisions
 )
