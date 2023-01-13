@@ -43,6 +43,7 @@ local DefaultSettings = {
 	CheeksSize = 1,
 	Collisions = false,
 	ForceAllRigs = false,
+	Only_Me = false,
 	Only_Others = false,
 	Simulate_Physics_On_LocalPlayer_Only = false,
 }
@@ -310,9 +311,15 @@ end
 
 local function VerifyRigAndApply(instance, ApplyPhysics)
 	if instance:IsA("Model") then
-    task.wait(1.5)
+  		task.wait(1.5)
 		local Player
+		if Settings.Only_Me then
+			Player = Players:GetPlayerFromCharacter(instance)
+			if Player ~= LocalPlayer then
+				return
+			end
 		if Settings.Only_Others then
+			if Settings.Only_Me then return
 			Player = Players:GetPlayerFromCharacter(instance)
 			if Player == LocalPlayer then
 				return
