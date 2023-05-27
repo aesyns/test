@@ -1,11 +1,6 @@
 --real ass jin script! touch V
-local EnableRelicTrading = false
 local POOPMODE = true --DONT DISABLE!
 
-
-if (EnableRelicTrading) then
-    game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible = true
-end
 
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
 local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
