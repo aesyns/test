@@ -1,7 +1,7 @@
 --real ass jin script! touch V
 local POOPMODE = true --DONT DISABLE!
 
-if _G.UseArrow ~= nil then print(_G.UseArrow) else print("nil") _G.UseArrow = false end
+if _G.UseArrow ~= nil then else _G.UseArrow = false end
 
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
 local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
@@ -36,14 +36,6 @@ while true do
             Player.Character.HumanoidRootPart.CFrame = GodBrick.CFrame
             task.wait(0.1)
             if (req.Enabled) then req.Enabled = false end
-            if (_G.UseArrows) then
-                if Player.Backpack:FindFirstChild("Protein Shake") then
-                    local tool = Player.BackPack:FindFirstChild("Protein Shake")
-                    Player.Character.Humanoid:EquipTool(tool)
-                     task.wait(0.1)
-                     tool.Activate()
-                 end
-            end
         end
     end
 end
