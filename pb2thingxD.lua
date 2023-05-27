@@ -5,7 +5,7 @@ if _G.UseArrow ~= nil then else _G.UseArrow = false end
 
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
 
-local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
+local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll.Enabled
 local Player = game:GetService("Players").LocalPlayer
 local mouse = Player:GetMouse()
 local GodBrick = Instance.new("Part")
@@ -19,6 +19,8 @@ if not POOPMODE then game:GetService("Players").LocalPlayer:Kick("BANNED, DIDN'T
 mouse.KeyDown:connect(function(key)
 	if key == "p" then
 		GuiThing = not GuiThing
+	elseif key == "m"
+		req = not req
 	end
 end)
 --^^ !!!DONT TOUCH REALLY IMPORTANT!!! ^^
@@ -45,7 +47,6 @@ while true do
 			task.wait(0.1)
 			Player.Character.HumanoidRootPart.CFrame = GodBrick.CFrame
 			task.wait(0.1)
-			if (req.Enabled) then req.Enabled = false end
 		end
 	end
 end
