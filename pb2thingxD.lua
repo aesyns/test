@@ -5,11 +5,11 @@ if _G.UseArrow ~= nil then else _G.UseArrow = false end
 
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
 
-local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll.Enabled
+local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
 local Player = game:GetService("Players").LocalPlayer
 local mouse = Player:GetMouse()
 local GodBrick = Instance.new("Part")
-local GuiThing = game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible
+local GuiThing = game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract
 GodBrick.Parent = game.Workspace
 GodBrick.Anchored = true
 GodBrick.Transparency = 1
@@ -18,9 +18,9 @@ req.Enabled = true
 if not POOPMODE then game:GetService("Players").LocalPlayer:Kick("BANNED, DIDN'T USE POOP MODE! O_O") end
 mouse.KeyDown:connect(function(key)
 	if key == "p" then
-		GuiThing = not GuiThing
+		GuiThing.Visible = not GuiThing.Visible
 	elseif key == "m" then
-		req = not req
+		req.Enabled = not req.Enabled
 	end
 end)
 --^^ !!!DONT TOUCH REALLY IMPORTANT!!! ^^
