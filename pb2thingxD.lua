@@ -19,7 +19,7 @@ if not POOPMODE then game:GetService("Players").LocalPlayer:Kick("BANNED, DIDN'T
 mouse.KeyDown:connect(function(key)
 	if key == "p" then
 		GuiThing = not GuiThing
-	elseif key == "m"
+	elseif key == "m" then
 		req = not req
 	end
 end)
