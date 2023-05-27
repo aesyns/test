@@ -55,6 +55,7 @@ while true do
             task.wait(0.1)
             Player.Character.HumanoidRootPart.CFrame = GodBrick.CFrame
             task.wait(0.1)
+            if (req.Enabled) then req.Enabled = false end
         end
     end
 end
