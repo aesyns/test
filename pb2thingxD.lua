@@ -1,10 +1,11 @@
+while not game:GetService("Players").LocalPlayer.PlayerGui or not game:GetService("CoreGui") or not game:GetService("Players").LocalPlayer do task.wait() end
 --real ass jin script! touch V
 local POOPMODE = true --DONT DISABLE!
 
-if _G.UseArrow ~= nil then else _G.UseArrow = false end
-
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
-
+local vu = game:GetService("VirtualUser") 
+game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame) end)
+if _G.UseArrow ~= nil then else _G.UseArrow = false end
 local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
 local Player = game:GetService("Players").LocalPlayer
 local mouse = Player:GetMouse()
