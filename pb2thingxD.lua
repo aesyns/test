@@ -1,7 +1,7 @@
 --real ass jin script! touch V
 local POOPMODE = true --DONT DISABLE!
 
-if _G.UseArrow = nil then print("nil") _G.UseArrow = false return end
+if _G.UseArrow ~= true and _G.UseArrow ~= false then print("nil") _G.UseArrow = false return end
 
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
 local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
