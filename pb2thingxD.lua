@@ -10,23 +10,6 @@ end
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
 local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
 local Player = game:GetService("Players").LocalPlayer
-local GC = getconnections or get_signal_cons
-if GC then
-    req.Enabled = true
-		for i,v in pairs(GC(Player.Idled)) do
-			if v["Disable"] then
-				v["Disable"](v)
-			elseif v["Disconnect"] then
-				v["Disconnect"](v)
-			end
-		end
-	else
-		Players.LocalPlayer.Idled:Connect(function()
-			local VirtualUser = game:GetService("VirtualUser")
-			VirtualUser:CaptureController()
-			VirtualUser:ClickButton2(Vector2.new())
-		end)
-	end
 local GodBrick = Instance.new("Part")
 GodBrick.Parent = game.Workspace
 GodBrick.Anchored = true
