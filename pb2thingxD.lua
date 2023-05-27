@@ -17,6 +17,7 @@ req.Enabled = true
 if not POOPMODE then game:GetService("Players").LocalPlayer:Kick("BANNED, DIDN'T USE POOP MODE! O_O") end
 mouse.KeyDown:connect(function(key)
 	if key == "p" then
+		print("key pressed")
 		if (game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible) then
 			game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible = false
 		else
