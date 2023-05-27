@@ -1,6 +1,7 @@
 --real ass jin script! touch V
 local POOPMODE = true --DONT DISABLE!
 
+if _G.UseArrow = nil then print("nil") _G.UseArrow = false return end
 
 --vv !!!DONT TOUCH REALLY IMPORTANT!!! vv
 local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
@@ -10,6 +11,7 @@ GodBrick.Parent = game.Workspace
 GodBrick.Anchored = true
 GodBrick.Transparency = 1
 GodBrick.CanCollide = false
+req.Enabled = true
 if not POOPMODE then game:GetService("Players").LocalPlayer:Kick("BANNED, DIDN'T USE POOP MODE! O_O") end
 --^^ !!!DONT TOUCH REALLY IMPORTANT!!! ^^
 
@@ -34,6 +36,12 @@ while true do
             Player.Character.HumanoidRootPart.CFrame = GodBrick.CFrame
             task.wait(0.1)
             if (req.Enabled) then req.Enabled = false end
+            if Player.Backpack:FindFirstChild("Protein Shake") then
+                local tool = Player.BackPack:FindFirstChild("Protein Shake")
+                Player.Character.Humanoid:EquipTool(tool)
+                task.wait(0.1)
+                tool.Activate()
+             end
         end
     end
 end
