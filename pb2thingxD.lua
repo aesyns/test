@@ -9,6 +9,7 @@ local req = game:GetService("Players").LocalPlayer.PlayerGui.Troll
 local Player = game:GetService("Players").LocalPlayer
 local mouse = Player:GetMouse()
 local GodBrick = Instance.new("Part")
+local GuiThing = game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible
 GodBrick.Parent = game.Workspace
 GodBrick.Anchored = true
 GodBrick.Transparency = 1
@@ -17,12 +18,7 @@ req.Enabled = true
 if not POOPMODE then game:GetService("Players").LocalPlayer:Kick("BANNED, DIDN'T USE POOP MODE! O_O") end
 mouse.KeyDown:connect(function(key)
 	if key == "p" then
-		print("key pressed")
-		if (game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible) then
-			game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible = false
-		else
-			game:GetService("Players").LocalPlayer.PlayerGui.TradeUpGUI.contract.Visible = true
-		end
+		GuiThing = not GuiThing
 	end
 end)
 --^^ !!!DONT TOUCH REALLY IMPORTANT!!! ^^
