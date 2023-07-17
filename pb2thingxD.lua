@@ -1,3 +1,5 @@
+task.wait(2.5)
+
 while not game:GetService("Players").LocalPlayer.PlayerGui or not game:GetService("CoreGui") or not game:GetService("Players").LocalPlayer do task.wait() end
 --real ass jin script! touch V
 local POOPMODE = true --DONT DISABLE!
